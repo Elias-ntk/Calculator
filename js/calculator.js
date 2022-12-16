@@ -17,9 +17,16 @@ function calculator (button, display){
 }
 
 function print (display, button){
-    if (button.innerHTML === '.' && display.innerHTML.includes('.')){
-        return  
+    if (button.innerHTML === '/' || button.innerHTML === '+' || button.innerHTML === '-' || button.innerHTML === '*'){
+        if (display.innerHTML == '0') {return }
     }
+    
+    if(button.innerHTML === '/' || button.innerHTML === '+' || button.innerHTML === '-' || button.innerHTML === '*' || button.innerHTML === '.'){
+        if (display.innerHTML.slice(-1) === '/' || display.innerHTML.slice(-1) === '+' || display.innerHTML.slice(-1) === '-' || display.innerHTML.slice(-1) === '*' || display.innerHTML.slice(-1) === '.'){
+            return
+        }
+    }
+
 
     if (display.innerHTML == '0'){
         display.innerHTML = '';
