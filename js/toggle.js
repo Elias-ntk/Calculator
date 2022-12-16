@@ -11,9 +11,9 @@ let valor = localStorage.getItem("container-tgl");
 
 
 if (valor == "true"){
-    body.classList.add("active");
+    body.classList.add('active');
     toggle.classList.add('active');
 } else {
-    body.classList.remove("active");
+    body.classList.remove('active');
     toggle.classList.remove('active');
 }

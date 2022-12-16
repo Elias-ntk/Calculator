@@ -44,7 +44,7 @@ body{
     height:23vh;
     width:100%;
     text-align: right;
-    
+    word-break: break-all;
 }
 
 .calculator-keypad {
@@ -64,7 +64,7 @@ body{
       
 }
 
-.operador-big, .numbers-big {
+.operador.big, .numbers.big {
     font-size: 1rem;
     font-weight:600;
     grid-column: span 2;
@@ -91,7 +91,7 @@ body{
     
 }
 
-.numbers-big:hover,.operador-big:hover,.numbers:hover,.operador:hover{
+.numbers.big:hover,.operador.big:hover,.numbers:hover,.operador:hover{
     background-color: rgba(216, 216, 216, 0.816);
     cursor: pointer;
     color: #1f2937;
@@ -100,9 +100,9 @@ body{
 }
 
 
-.operador:active,.numbers:active,.numbers-big:active,.operador-big:active {
+.operador:active,.numbers:active,.numbers.big:active,.operador.big:active {
     background-color: #1f293730;
-    box-shadow: 1px 1px 5px -2px #00233482, -1px -1px 5px -2px #00233482;
+    box-shadow: 1px 1px 3px -2px #002334d2, -1px -1px 3px -2px #002334c1;
     
 }
 
@@ -156,7 +156,7 @@ body.active .display{
     
 }
 
-body.active .operador-big, body.active .numbers-big, body.active .operador, body.active .numbers{
+body.active .operador.big, body.active .numbers.big, body.active .operador, body.active .numbers{
     background-color: #1f2937;
     color: #ffffff8f;
     box-shadow: 5px 5px 10px -3px #151515, -5px -8px 10px -2px #35465e;
@@ -164,12 +164,12 @@ body.active .operador-big, body.active .numbers-big, body.active .operador, body
 }
 
 
-body.active .numbers-big:hover,body.active .operador-big:hover,body.active .numbers:hover,body.active .operador:hover{
+body.active .numbers.big:hover,body.active .operador.big:hover,body.active .numbers:hover,body.active .operador:hover{
     background-color: #161d2777;
     
 }
 
-body.active .numbers-big:active,body.active .operador-big:active,body.active .numbers:active,body.active .operador:active{
+body.active .numbers.big:active,body.active .operador.big:active,body.active .numbers:active,body.active .operador:active{
     background-color: #161d27cd;
     box-shadow: 2px 2px 5px -4px #001a27d0, -2px -2px 5px -4px #001a27d0;
     
