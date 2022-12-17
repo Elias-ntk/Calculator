@@ -16,7 +16,9 @@ function calculator (button, display){
     }
 }
 
+
 function print (display, button){
+
     if (button.innerHTML === '/' || button.innerHTML === '+' || button.innerHTML === '-' || button.innerHTML === '*'){
         if (display.innerHTML == '0') {return }
     }
@@ -26,6 +28,8 @@ function print (display, button){
             return
         }
     }
+
+    if (button.innerHTML === '.' && display.innerHTML.includes('.')) return
 
 
     if (display.innerHTML == '0'){
@@ -37,10 +41,19 @@ function print (display, button){
     
 }
 
+
+
 function calculate (display){
 
-    display.innerHTML = eval(display.innerHTML);
+    if (display.innerHTML.includes('/0')){
+        display.innerHTML = '0';
+    }else {
+        display.innerHTML = eval(display.innerHTML);
+    }
+
 }
+
+
 
 function remove (display, button){
     if (button.innerHTML === '←' && display.innerHTML === '0') return
@@ -49,6 +62,8 @@ function remove (display, button){
 
     if (display.innerHTML === '') display.innerHTML = '0'
 }
+
+
 
 function removeAll (display){
     display.innerHTML = '0';
