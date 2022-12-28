@@ -19,7 +19,7 @@ body{
     height: 694px;
     width: 500px;
     margin: 0 auto;
-    margin-top: 17px;
+    /* margin-top: 17px; */
     margin-bottom: 17px;
     border-radius: 32px;
     
@@ -34,6 +34,7 @@ body{
 }
 
 .display {
+    margin: 0 auto;
     display: flex;
     flex-direction:row-reverse;
     align-items:flex-end;
@@ -44,7 +45,8 @@ body{
     height:23vh;
     width:100%;
     text-align: right;
-    word-break: break-all;
+    word-break: break-all; 
+    /* flex-wrap: nowrap; */
 }
 
 .calculator-keypad {
@@ -110,11 +112,11 @@ body{
         /* -- BUTTON DARK -- */
 
 #container-tgl{
-    width: 60px;
+    width: 52px;
     height: 30px;
-    position: relative;
+    position: absolute;
     top: 10px;
-    left: -115px;
+    left: 180px;
     border-radius: 50px;
     box-shadow: inset 1px 1px 4px #3b4e5821, inset -1px -1px 4px #3b4e5821;
     cursor: pointer;
@@ -172,5 +174,220 @@ body.active .numbers.big:hover,body.active .operador.big:hover,body.active .numb
 body.active .numbers.big:active,body.active .operador.big:active,body.active .numbers:active,body.active .operador:active{
     background-color: #161d27cd;
     box-shadow: 2px 2px 5px -4px #001a27d0, -2px -2px 5px -4px #001a27d0;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1024px){
+    .container{
+        width: 1024px;
+    }
+    .display{
+        margin: 0 auto;
+        height: 20vh;
+        width: 400px;
+    }
+    #container-tgl{
+        
+        left: 100px;
+    }
+    .buttons {
+        grid-template-columns: repeat(4, 45%);
+        justify-content: center;
+        gap: 12px;
+          
+    }
+    
+}
+
+@media (max-width:776px){
+    .container{
+        width: 776px;
+    }
+    .display{
+        margin: 0 auto;
+        width: 400px;
+    }
+    #container-tgl{
+        
+        left: 100px;
+    }
+    .buttons {
+        grid-template-columns: repeat(4, 45%);
+        justify-content: center;
+        gap: 13px;
+          
+    }
+    
+}
+@media (max-width:600px){
+    .container{
+        height: 100%;
+        width: 600px;
+    }
+    .display{
+        margin: 0 auto;
+        height: 20vh;
+        width: 400px;
+    }
+    #container-tgl{
+        
+        left: 50px;
+    }
+    .buttons {
+        grid-template-columns: repeat(4, 45%);
+        justify-content: center;
+        gap: 10px;
+          
+    }
+}
+
+@media (max-width:500px){
+    .container{
+        height: 100%;
+        width: 500px;
+    }
+    .display{
+        margin: 0 auto;
+        width: 400px;
+    }
+    #container-tgl{
+        top: 15px;
+        left: 25px;
+    }
+    .buttons {
+        grid-template-columns: repeat(4, 45%);
+        justify-content: center;
+        gap: 10px;
+          
+    }
+    
+}
+@media (max-width:400px){
+    .display{
+        height: 20vh;
+        width: 400px;
+    }
+    .container{
+        width: 400px;
+    }
+    #container-tgl{
+        top: 102%;
+        left: 43%;
+    }
+    .buttons {
+        grid-template-columns: repeat(4, 45%);
+        justify-content: center;
+        gap: 10px;
+          
+    }
+    
+}
+
+@media (max-width:399px){
+    .display{
+        width: 350px;
+    }
+    .container{
+        height: 100%;
+        width: 390px;
+    }
+    #container-tgl{
+        top: 102%;
+        left: 43%;
+    }
+    .buttons {
+        grid-template-columns: repeat(4, 45%);
+        justify-content: center;
+        gap: 10px;
+          
+    }
+    
+}
+
+
+@media (max-width:375px){
+    .display{
+        width: 340px;
+    }
+    .container{
+        width: 375px;
+    }
+    #container-tgl{
+        position: absolute;
+        top: 102%;
+        left: 43%;
+    }
+    .buttons {
+        grid-template-columns: repeat(4, 40%);
+        justify-content: center;
+        gap: 10px;
+          
+    }
+    
+}
+
+@media (max-width:360px){
+    .display{
+        width: 360px;
+    }
+    .container{
+        width: 360px;
+    }
+    #container-tgl{
+        top: 102%;
+        left: 43%;
+    }
+    .buttons {
+        grid-template-columns: repeat(4, 40%);
+        justify-content: center;
+        gap: 10px;
+          
+    }
+    
+}
+
+@media (max-width:320px){
+    .display{
+        width: 320px;
+    }
+    .container{
+        width: 320px;
+    }
+    #container-tgl{
+        top: 102%;
+        left: 43%;
+    }
+    .buttons {
+        grid-template-columns: repeat(4, 38%);
+        justify-content: center;
+        gap: 10px;
+          
+    }
     
 }
