@@ -318,7 +318,7 @@ body.active .numbers.big:active,body.active .operador.big:active,body.active .nu
         width: 390px;
     }
     #container-tgl{
-        top: 102%;
+        top: 700px;
         left: 43%;
     }
     .buttons {
@@ -340,7 +340,7 @@ body.active .numbers.big:active,body.active .operador.big:active,body.active .nu
     }
     #container-tgl{
         position: absolute;
-        top: 102%;
+        top: 700px;
         left: 43%;
     }
     .buttons {
@@ -360,7 +360,7 @@ body.active .numbers.big:active,body.active .operador.big:active,body.active .nu
         width: 360px;
     }
     #container-tgl{
-        top: 102%;
+        top: 700px;
         left: 43%;
     }
     .buttons {
@@ -380,11 +380,33 @@ body.active .numbers.big:active,body.active .operador.big:active,body.active .nu
         width: 320px;
     }
     #container-tgl{
-        top: 102%;
+        top: 700px;
         left: 43%;
     }
     .buttons {
         grid-template-columns: repeat(4, 38%);
+        justify-content: center;
+        gap: 10px;
+          
+    }
+    
+}
+@media (max-width:286px){
+    .display{
+        width: 286px;
+        height: 17vh;
+    }
+    .container{
+        width: 286px;
+    }
+    #container-tgl{
+        top: 645px;
+        left: 125px;
+    }
+    
+    
+    .buttons {
+        grid-template-columns: repeat(4, 30%);
         justify-content: center;
         gap: 10px;
           
