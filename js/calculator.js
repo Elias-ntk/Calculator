@@ -1,6 +1,6 @@
 
-function calculator (button, display){
-    switch(button.innerHTML){
+function calculator(button, display) {
+    switch (button.innerHTML) {
         case 'C':
             removeAll(display);
             break;
@@ -16,55 +16,47 @@ function calculator (button, display){
     }
 }
 
-
-function print (display, button){
-
-    if (button.innerHTML === '/' || button.innerHTML === '+' || button.innerHTML === '-' || button.innerHTML === '*'){
-        if (display.innerHTML == '0') {return }
-    }
-    
-    if(button.innerHTML === '/' || button.innerHTML === '+' || button.innerHTML === '-' || button.innerHTML === '*' || button.innerHTML === '.'){
-        if (display.innerHTML.slice(-1) === '/' || display.innerHTML.slice(-1) === '+' || display.innerHTML.slice(-1) === '-' || display.innerHTML.slice(-1) === '*' || display.innerHTML.slice(-1) === '.'){
-            return
-        }
-    }
-
-    if (button.innerHTML === '.' && display.innerHTML.includes('.')) return
-
-
-    if (display.innerHTML == '0'){
-        display.innerHTML = '';
-    }
-
-
-    display.innerHTML = display.innerHTML.toString() + button.innerHTML.toString();
-    
+function isMathOperationOrDot(sign) {
+    return isMathOperation(sign) || sign === '.'
 }
 
+function isMathOperation(sign) {
+    return sign === '/' || sign === '+' || sign === '-' || sign === '*'
+}
 
+function print(display, button) {
+    let buttonContent = button.innerHTML
+    let lastPositionDisplay = display.innerHTML.slice(-1)
 
-function calculate (display){
+    if (isMathOperation(buttonContent) && display.innerHTML == '0') return
 
-    if (display.innerHTML.includes('/0')){
-        display.innerHTML = '0';
-    }else {
-        display.innerHTML = eval(display.innerHTML);
-    }
+    if (isMathOperationOrDot(buttonContent) && isMathOperationOrDot(lastPositionDisplay)) return
+
+    if (buttonContent === '.' && display.innerHTML.includes('.')) return
+
+    if (display.innerHTML == '0') display.innerHTML = '';
+
+    display.innerHTML = display.innerHTML.toString() + buttonContent.toString();
 
 }
 
+function calculate(display) {
 
+    if (display.innerHTML.includes('/0')) display.innerHTML = '0';
+    else display.innerHTML = eval(display.innerHTML);
 
-function remove (display, button){
+}
+
+function remove(display, button) {
     if (button.innerHTML === '←' && display.innerHTML === '0') return
-    
+
     display.innerHTML = display.innerHTML.slice(0, -1)
 
-    if (display.innerHTML === '') display.innerHTML = '0'
+    if (display.innerHTML === '') display.innerHTML = '0';
 }
 
 
 
-function removeAll (display){
+function removeAll(display) {
     display.innerHTML = '0';
 }
